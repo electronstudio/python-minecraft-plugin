@@ -1,0 +1,45 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.github.jengelman.gradle.plugins:shadow:2.0.2"
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'uk.co.electronstudio'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+
+
+
+repositories {
+    mavenCentral()
+    maven {
+        name 'papermc'
+        url 'https://papermc.io/repo/repository/maven-public/'
+    }
+}
+
+
+
+dependencies {
+    compile "io.papermc:paperlib:1.0.2"
+    compile "com.destroystokyo.paper:paper-api:1.15.2-R0.1-SNAPSHOT"
+    compile group: 'org.graalvm.sdk', name: 'polyglot-tck', version: '19.3.1'
+}
+
+
+
+
+apply plugin: "com.github.johnrengelman.shadow"
+shadowJar {
+    relocate 'io.papermc.lib', 'uk.co.electronstudio.paperlib'
+}
