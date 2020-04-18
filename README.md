@@ -17,18 +17,18 @@ This is just a single array from Python, not an entire plugin, but it proves it 
 
 2. Install Python for GrallVM:
 
-    ~/Downloads/graalvm-ce-java8-20.0.0/Contents/Home/bin/gu install python
+    `~/Downloads/graalvm-ce-java8-20.0.0/Contents/Home/bin/gu install python`
 
 3. Download PaperMC minecraft server (fork of Spigot): https://papermc.io/downloads
 
 4. Check that you can run PaperMC using GraalVM
 
-    ~/Downloads/graalvm-ce-java8-20.0.0/Contents/Home/bin/java -jar paper-*.jar
+    `~/Downloads/graalvm-ce-java8-20.0.0/Contents/Home/bin/java -jar paper-*.jar`
 
 5. Compile the sample plugin:
 
-    ./gradlew jar
+    `./gradlew jar`
 
 6. Copy the generated plugin jar into the plugins folder of PaperMC and re-run paperMC.
 
-    cp build/libs/*.jar ~/papermc/plugins/
+    `cp build/libs/*.jar ~/papermc/plugins/`
